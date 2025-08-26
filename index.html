@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login-register.css">
+    </head>
+<body>
+    <!-- Login -->
+    <div id="login" class="section">
+    <div class="container-login">
+        <div class="login-box-login">
+            <div class="login-kutu">
+                <span>
+                    <h2 class="login-header">Giriş Yap</h2>
+                </span>
+                <br>
+                <form action="" method="get">
+                    <div class="textbox-login">
+                        <input type="text" placeholder="Kullanıcı Adı" name="username" id="username1" required>
+                    </div>
+                    <div class="textbox-login">
+                        <input type="email" placeholder="E-posta" name="email" id="email1" required>
+                    </div>
+                    <div class="textbox-login">
+                        <input type="password" placeholder="Şifre" name="password" id="password1" required>
+                    </div>
+                    <button type="submit" class="btn-login">Giriş Yap</button>
+                    <p class="register-text">Hesabınız yok mu? <a href="#" onclick="showSection('register')" class="kayitol-link">Kayıt Ol</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Register -->
+    <div id="register" class="section" style="display: none; color:white;">
+    <div class="container-register">
+        <div class="login-box-register">
+            <div class="register-kutu">
+                <span>
+                    <h2 class="register-header">Kayıt Ol</h2>
+                </span>
+                <br>
+                <form action="" method="post">
+                    <div class="textbox-register">
+                        <input type="text" placeholder="Kullanıcı Adı" name="username" id="username2" required>
+                    </div>
+                    <div class="textbox-register">
+                        <input type="email" placeholder="E-posta" name="email" id="email2" required>
+                    </div>
+                    <div class="textbox-register">
+                        <input type="email" placeholder="E-posta Tekrar" name="email2-1" id="email2-1" required>
+                    </div>
+                      <div class="textbox-register">
+                        <input type="password" placeholder="Şifre" name="password" id="password2" required>
+                    </div>
+                    <button type="submit" class="btn-register">Kayıt Ol</button>
+                    <p class="login-text">Hesabınız Var mı? <a href="#" onclick="showSection('login')" class="girisyap-link">Giriş Yap</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+// Sayfa içi bölüm gösterme
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+}
+// Ana sayfaya dönme
+function goHome() {
+    showSection('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+
+</html>
